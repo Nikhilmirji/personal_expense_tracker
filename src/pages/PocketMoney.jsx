@@ -80,8 +80,10 @@ export function PocketMoney() {
             <div className="flex items-start space-x-3">
               <TrendingUp className="w-6 h-6 text-primary mt-1" />
               <div>
-                <h4 className="font-semibold text-primary">Great Job!</h4>
-                <p className="text-sm text-text-muted mt-1">56% of your monthly pocket money goes into investments. You are building a strong future.</p>
+                <h4 className="font-semibold text-primary">Budget Analysis</h4>
+                <p className="text-sm text-text-muted mt-1">
+                  {((data.summary.totalInvested / data.user.monthlyPocketMoney) * 100).toFixed(0)}% of your monthly pocket money goes into investments, and you are saving {((data.summary.totalSaved / data.user.monthlyPocketMoney) * 100).toFixed(0)}%. You are building a strong financial future.
+                </p>
               </div>
             </div>
           </div>
